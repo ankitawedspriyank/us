@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wedding Invitation </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+  function SubForm (){
+      $.ajax({
+          url:'https://api.apispreadsheets.com/data/3ezxBYlty2OCkcKj/',
+          type:'post',
+          data:$("#myForm").serializeArray(),
+          
+      });
+      window.open(
+            "going.html")
+  }
+  </script>
+<script src=
+	"https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+        function passValue() {
+            var name=document.getElementById('text').value;
+            localStorage.setItem("textvalue",name);
+             
+        }
+    </script>
+   
+  
+<script type="text/javascript">
+	function sendEmail() {
+	Email.send({
+		Host: "smtp.elasticemail.com",
+		Username: "weddinginvitation550@gmail.com",
+		Password: "478A773E28C389AAFA398AF4AE414CD1446A",
+		To: 'weddinginvitation550@gmail.com',
+		From: "weddinginvitation550@gmail.com",
+		Subject: "Invitation Accepted",
+		Body: document.getElementById('text').value,
+          
+	})
+		window.open(
+            "going.html")
+	}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#4").click(function(){
+    alert("The paragraph was clicked.");
+  });
+});
+</script>
+<script>
+  function validateTextBox() {
+    if (document.getElementById("textbox").value != "") {} else {
+        alert("Please enter a value");
+    }
+}
+</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  
+}
+
+  
+
+.bgimg {background-image: url("https://github.com/adityaSrivastava29/vivek-certificates/blob/master/wedding_couple.jpg?raw=true")}
+
+	
+	.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+   transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">Ankita and Priyank </h1>
+    <h2>Are getting married</h2>
+    <h2><b>08.07.2022</b></h2>
+  </div>
+</header>
+
+<!-- Navbar (sticky bottom) -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">Ankita & Priyank</a>
+    <a href="#wedding" style="width:25%" class="w3-bar-item w3-button">Wedding</a>
+    <a href="#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
+  </div>
+</div>
+
+<!-- About / Ankita And Priyam -->
+<div class="w3-container w3-padding-64 w3-pale-red " id="us">
+    <div class="w3-content">
+      <h1 class="w3-center w3-text-grey"><b>Ankita & Priyank</b></h1>
+      <img class="w3-round w3-image" src="https://user-images.githubusercontent.com/71128324/174437881-677d4f5d-ad58-483b-91d6-846e28f6a637.jpeg" style="width:100%;margin:32px 0">
+      <p><i>You all know us. And we all know you. We are getting married, and you all are invited </i>
+      </p><br>
+      
+    </div>
+  </div>
+
+<!-- Background photo -->
+
+<div class="w3-container w3-padding-64 w3-pale-red  w3-center container" id="wedding">
+    <div class="w3-content">
+      
+      <img class="w3-round w3-image " src="https://github.com/ankitawedspriyank/invitation/blob/main/WhatsApp%20Imag.jpeg?raw=true" style="width:100%;margin:32px 0" style="width:100%;margin:64px 0">
+      <div class="centered ">
+        <div class=" w3-text-white w3-center">
+        <h1>You Are Invited</h1><br>
+    <h2>Of course..</h2>
+</div>
+      </div>
+
+<!-- <div class="w3-display-container bgimg2 w3-image"> -->
+  </div>
+</div>
+
+<!-- RSVP section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+  <h1>HOPE YOU CAN MAKE IT!</h1>
+  <p class="w3-large">Kindly Respond By 8 July, 2022</p>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+  </p>
+</div>
+
+<!-- RSVP modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">CAN YOU COME?</h1>
+      <p>We really hope you can make it.</p>
+      <form id="myForm" onsubmit=" passValue();SubForm();  return false">
+        <input class="w3-input w3-border" type="text" value="  Shree U.S. Prasad ji (with family)" name ="name" id="text" required>
+         
+      
+      <p><i>Sincerely, Ankita & Priyank</i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+         <button  type="submit"  class="w3-button w3-block w3-green" >Going</button>
+         
+         
+        </div>
+        </form>
+        <div class="w3-half">
+ <button  type="button"  class="w3-button w3-block w3-red"  onclick="document.getElementById('01').style.display='block'">  Can't come</button>
+        
+       <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+        
+      </div>
+          
+        
+        
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">Hoping  </h1>
+      <p>You Could Make It.</p>
+         
+      <p><i>Sincerely, Ankita & Priyank</i></p>
+      
+       <div class="w3-center"><br>
+        <span onclick="document.getElementById('01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+        
+      </div>
+        
+         
+ 
+        
+      </div>
+    </div>
+  </div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Developed by <a href="https://vivekcyber2525.github.io/" title="W3.CSS" target="_blank" class="w3-hover-text-green">Vivek Mishra</a></p>
+</footer>
+<div class="w3-hide-small" style="margin-bottom:32px">&nbsp;</div>
+
+
+
+</body>
+</html>
